@@ -6,32 +6,28 @@ public class ControlEscena : MonoBehaviour
 {
     public List<GameObject> bombs;
     public Transform spawn;
-    GameObject bombaGenerada;
-    int tiempoSpawn;
+    public int timeSpawn = 0;
+    GameObject generatedBomb;
     Vector3 positionSpawn;
-    int indice;
+    int index;
 
     // Start is called before the first frame update
     void Start()
     {
         positionSpawn = spawn.position;
-        tiempoSpawn = 0;
-        InvokeRepeating("generarBombas", 0f, 5f);
+        InvokeRepeating("spawnBombs", 0f, 5f);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        positionSpawn = spawn.position;
-        //generarBombas();
     }
 
-    public void generarBombas()
+    public void spawnBombs()
     {
-        indice = Random.Range(0,bombs.Count);
-        Debug.Log(tiempoSpawn);
-        bombaGenerada = Instantiate(bombs[indice],positionSpawn,Quaternion.identity);
+        index = Random.Range(0,bombs.Count);
+        generatedBomb = Instantiate(bombs[index],positionSpawn,Quaternion.identity);
         
     }
 
