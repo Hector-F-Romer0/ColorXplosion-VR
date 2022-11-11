@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6462787757970534421}
   m_Layer: 0
   m_Name: YellowBomb
-  m_TagString: Untagged
+  m_TagString: yellowBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,3 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 4
+  colorBomb: yellow
+  yellowFloor: {fileID: 4257412417454173071, guid: d5615d616019430d9c2e8727e71c97fb, type: 3}
+  redFloor: {fileID: 0}
+  blueFloor: {fileID: 0}

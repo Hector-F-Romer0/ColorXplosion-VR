@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4932111075328615162}
   m_Layer: 0
   m_Name: RedBomb
-  m_TagString: Untagged
+  m_TagString: redBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,3 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 4
+  colorBomb: red
+  yellowFloor: {fileID: 0}
+  redFloor: {fileID: 0}
+  blueFloor: {fileID: 0}

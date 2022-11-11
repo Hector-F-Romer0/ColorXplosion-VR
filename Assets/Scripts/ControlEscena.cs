@@ -15,7 +15,7 @@ public class ControlEscena : MonoBehaviour
     void Start()
     {
         positionSpawn = spawn.position;
-        InvokeRepeating("spawnBombs", 0f, 5f);
+        InvokeRepeating("spawnBombs", 0f, 1f);
         
     }
 
