@@ -8,6 +8,8 @@ TagManager:
   - redBomb
   - blueBomb
   - yellowBomb
+  - doorgreen
+  - doororange
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Hands
+  - Interactive
+  - Grab
+  - Body
   - 
   - 
   - 
