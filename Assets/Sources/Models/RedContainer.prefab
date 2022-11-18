@@ -9,9 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1034083220875640960}
-  - component: {fileID: 3205833167331521723}
+  - component: {fileID: 9135822296710404790}
+  - component: {fileID: 2467542957001575596}
   - component: {fileID: 1147327098858158442}
   - component: {fileID: 4036419703068756607}
+  - component: {fileID: 4281534496404337245}
+  - component: {fileID: 4474063719145532382}
   m_Layer: 8
   m_Name: RedContainer
   m_TagString: Untagged
@@ -28,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 365387064663628346}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.28, y: -8.607, z: -11.8}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 444159848325657048}
@@ -36,7 +39,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3205833167331521723
+--- !u!65 &9135822296710404790
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,8 +50,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.37765, y: 1.8745284, z: 1.5598376}
-  m_Center: {x: 0.14877458, y: 0.16812027, z: 0.2799178}
+  m_Size: {x: 0.18010712, y: 2.2179413, z: 1.9132881}
+  m_Center: {x: -1.0513878, y: 0.036834717, z: 0.09465599}
+--- !u!65 &2467542957001575596
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365387064663628346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2589283, y: 1.6327896, z: 2.067772}
+  m_Center: {x: 0.9317446, y: 0.3163948, z: 0.13365173}
 --- !u!54 &1147327098858158442
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -190,6 +206,32 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!65 &4281534496404337245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365387064663628346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0288734, y: 1.9093437, z: 0.2871933}
+  m_Center: {x: -0.0673008, y: 0.14206505, z: 1.171032}
+--- !u!65 &4474063719145532382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365387064663628346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2654152, y: 2.2800102, z: 0.2837143}
+  m_Center: {x: -0.05070877, y: -0.06868553, z: -0.8973236}
 --- !u!1 &708037421810295931
 GameObject:
   m_ObjectHideFlags: 0
