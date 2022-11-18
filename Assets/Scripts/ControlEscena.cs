@@ -9,7 +9,8 @@ public class ControlEscena : MonoBehaviour
     public int timeSpawn = 0;
     GameObject generatedBomb;
     Vector3 positionSpawn;
-    int index;
+    public int index;
+    int index2;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +24,8 @@ public class ControlEscena : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        index = Random.Range(0,spawn.Count);
-        positionSpawn = spawn[index].position;
+        index2 = Random.Range(0,spawn.Count);
+        positionSpawn = spawn[index2].position;
     }
 
     public void spawnBombs()

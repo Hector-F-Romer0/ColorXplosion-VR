@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour
     int intervalo = 1;
     float nextTime = 0;
 
+    //public bombController objC;
+
     private void Start() {
         gameOver.enabled=false;
     }
