@@ -8,6 +8,8 @@ TagManager:
   - redBomb
   - blueBomb
   - yellowBomb
+  - doorgreen
+  - doororange
   layers:
   - Default
   - TransparentFX

@@ -61,7 +61,7 @@ crashlytics-build.properties
 # CONFIGS AGREGADAS DEL TUTORIAL DE YT
 
 /[Uu]ser[Ss]ettings/
-
+/UserSettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
