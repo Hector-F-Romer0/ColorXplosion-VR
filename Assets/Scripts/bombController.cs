@@ -22,36 +22,36 @@ public class bombController : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
-        //Debug.Log(other.gameObject.name);
-
-        if (colorBomb == "yellow" && other.gameObject.name == "collisionYellow")
+        if (colorBomb == "yellow" && other.gameObject.name == "YellowContainer")
         {
-            //Debug.Log("Bomba amarilla anotada en contenedor amarillo.");
+            Debug.Log("Bomba amarilla anotada en contenedor amarillo.");
             contador.contador++;
-           
-            
             Destroy(gameObject);
-        } else if (colorBomb == "blue" && other.gameObject.name == "collisionBlue")
-        {
-            //Debug.Log("Bomba azul anotada en contenedor azul.");
-            contador.contador++;
-            
-            Destroy(gameObject);
-            
         }
-        else if (colorBomb == "red" && other.gameObject.name == "collisionRed")
+        else if (colorBomb == "blue" && other.gameObject.name == "BlueContainer")
         {
-            //Debug.Log("Bomba roja anotada en contenedor roja.");
-            contador.contador++;  
+            Debug.Log("Bomba azul anotada en contenedor azul.");
+            contador.contador++;
             Destroy(gameObject);
-        }else if(other.gameObject.tag == "Floor")
+
+        }
+        else if (colorBomb == "red" && other.gameObject.name == "RedContainer")
+        {
+            Debug.Log("Bomba roja anotada en contenedor roja.");
+            contador.contador++;
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.tag == "Floor")
         {
             contador.contador--;
-            if (contador.contador<0){
-                contador.contador =0;
+            if (contador.contador < 0)
+            {
+                contador.contador = 0;
             }
             Destroy(gameObject);
-        }else  if(other.gameObject.tag == "Finish"){
+        }
+        else if (other.gameObject.tag == "Finish")
+        {
             Destroy(gameObject);
         }
     }
