@@ -15,6 +15,8 @@ public class ButtonVR : MonoBehaviour
     GameObject[] greenDoors;
     GameObject[] orangeDoors;
     public string assigedColor;
+    public Timer runTimer;
+    public bool startGame = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,14 @@ public class ButtonVR : MonoBehaviour
 
         greenDoors = GameObject.FindGameObjectsWithTag("doorgreen");
         orangeDoors = GameObject.FindGameObjectsWithTag("doororange");
+    }
+
+    private void Update()
+    {
+        if (startGame == true)
+        {
+            startGame = runTimer.runTimerCanvas();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -99,8 +109,11 @@ public class ButtonVR : MonoBehaviour
 
             }
         }
+    }
 
-        
-  
+    public void runGame()
+    {
+        startGame = true;
+        Debug.Log("Empieza el juego");
     }
 }

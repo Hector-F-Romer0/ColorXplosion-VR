@@ -20,28 +20,39 @@ public class Timer : MonoBehaviour
     }
     private void Update() {
 
-        if(Time.time >= nextTime){
+        runTimerCanvas();
+    
+    }
 
-            nextTime+= intervalo;
-            seg-=1;
+    public bool runTimerCanvas()
+    {
+        if (Time.time >= nextTime)
+        {
+
+            nextTime += intervalo;
+            seg -= 1;
         }
 
-        if(seg<0){
+        if (seg < 0)
+        {
             seg = 0;
         }
 
-        if(seg==0 & min >= 1){
-            min-=1;
-            seg=59;
+        if (seg == 0 & min >= 1)
+        {
+            min -= 1;
+            seg = 59;
         }
 
-        if(seg==0 & seg == 0){
-
-            gameOver.enabled=true;
+        if (seg == 0 & seg == 0)
+        {
+            Debug.Log("Se acabó el juego");
+            gameOver.enabled = true;
+            return false;
         }
 
-        texto.text = min.ToString("00")+":"+seg.ToString("00");
-    
+        texto.text = min.ToString("00") + ":" + seg.ToString("00");
+        return true;
     }
     
 }

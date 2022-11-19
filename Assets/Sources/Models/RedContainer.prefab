@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4474063719145532382}
   m_Layer: 8
   m_Name: RedContainer
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +35,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 444159848325657048}
-  - {fileID: 708037421810295930}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -232,51 +231,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2654152, y: 2.2800102, z: 0.2837143}
   m_Center: {x: -0.05070877, y: -0.06868553, z: -0.8973236}
---- !u!1 &708037421810295931
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 708037421810295930}
-  - component: {fileID: 708037421810295929}
-  m_Layer: 8
-  m_Name: collisionBotttom
-  m_TagString: Floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &708037421810295930
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708037421810295931}
-  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.44, z: -0.05037228}
-  m_LocalScale: {x: 1.2920709, y: 0.07048246, z: 1.2920709}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1034083220875640960}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &708037421810295929
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708037421810295931}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.107075, y: 3.6190872, z: 0.93797946}
-  m_Center: {x: 0.05592194, y: 1.3095441, z: -0.019813113}
 --- !u!1 &8691901622020678371
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +326,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 90a685d75485f474fb3e65ca906d578f, type: 3}
