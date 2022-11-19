@@ -12,26 +12,50 @@ public class ControlEscena : MonoBehaviour
     public int index;
     int index2;
 
+    public bool startGame = false;
+    public bool firstTime = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        positionSpawn = spawn[0].position;
-        InvokeRepeating("spawnBombs", 0f, 2f);
-     
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        index2 = Random.Range(0,spawn.Count);
-        positionSpawn = spawn[index2].position;
+        if(firstTime == false)
+        {
+            InvokeRepeating("spawnBombs", 0f, 2f);
+            firstTime = true;
+        }
+
+        if(startGame == true)
+        {
+            Debug.Log("El juego está empiezandoooooo");
+            
+            index2 = Random.Range(0, spawn.Count);
+            positionSpawn = spawn[index2].position;
+
+        }
+
+    }
+
+    public void startSpawn()
+    {
+        positionSpawn = spawn[0].position;
+        InvokeRepeating("spawnBombs", 0f, 2f);
+    }
+
+    public void stopGame()
+    {
+        CancelInvoke("spawnBombs");
     }
 
     public void spawnBombs()
     {
-        index = Random.Range(0,bombs.Count);
-        generatedBomb = Instantiate(bombs[index],positionSpawn,Quaternion.identity);
-        
+        index = Random.Range(0, bombs.Count);
+        generatedBomb = Instantiate(bombs[index], positionSpawn, Quaternion.identity);
+
     }
 }

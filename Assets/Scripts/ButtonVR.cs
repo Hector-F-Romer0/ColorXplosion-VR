@@ -16,7 +16,9 @@ public class ButtonVR : MonoBehaviour
     GameObject[] orangeDoors;
     public string assigedColor;
     public Timer runTimer;
-    public bool startGame = false;
+
+
+    public ControlEscena bombSpawnerController;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +32,9 @@ public class ButtonVR : MonoBehaviour
 
     private void Update()
     {
-        if (startGame == true)
+        if (bombSpawnerController.startGame == true)
         {
-            startGame = runTimer.runTimerCanvas();
+            bombSpawnerController.startGame = runTimer.runTimerCanvas();
         }
     }
 
@@ -57,15 +59,6 @@ public class ButtonVR : MonoBehaviour
             onRelease.Invoke();
             isPressed = false;
         }
-    }
-
-    public void spawnSphere()
-    {
-        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        sphere.transform.localPosition = new Vector3(0, 1, 2);
-        sphere.AddComponent<Rigidbody>();
-        Debug.Log("HAS PRESIONADO EL BOTÓN");
     }
 
     public void toogleDoor()
@@ -113,7 +106,12 @@ public class ButtonVR : MonoBehaviour
 
     public void runGame()
     {
-        startGame = true;
-        Debug.Log("Empieza el juego");
+        if(bombSpawnerController.startGame == false)
+        {
+            bombSpawnerController.startGame = true;
+            bombSpawnerController.firstTime = false;
+            Debug.Log("Empieza el juego");
+        }
+
     }
 }

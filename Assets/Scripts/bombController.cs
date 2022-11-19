@@ -24,20 +24,20 @@ public class bombController : MonoBehaviour
     {
         if (colorBomb == "yellow" && other.gameObject.name == "YellowContainer")
         {
-            Debug.Log("Bomba amarilla anotada en contenedor amarillo.");
+            //Debug.Log("Bomba amarilla anotada en contenedor amarillo.");
             contador.contador++;
             Destroy(gameObject);
         }
         else if (colorBomb == "blue" && other.gameObject.name == "BlueContainer")
         {
-            Debug.Log("Bomba azul anotada en contenedor azul.");
+            //Debug.Log("Bomba azul anotada en contenedor azul.");
             contador.contador++;
             Destroy(gameObject);
 
         }
         else if (colorBomb == "red" && other.gameObject.name == "RedContainer")
         {
-            Debug.Log("Bomba roja anotada en contenedor roja.");
+            //Debug.Log("Bomba roja anotada en contenedor roja.");
             contador.contador++;
             Destroy(gameObject);
         }

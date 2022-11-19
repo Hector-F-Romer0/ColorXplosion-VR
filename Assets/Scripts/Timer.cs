@@ -13,6 +13,8 @@ public class Timer : MonoBehaviour
     int intervalo = 1;
     float nextTime = 0;
 
+    public ControlEscena sceneController;
+
     //public bombController objC;
 
     private void Start() {
@@ -20,7 +22,7 @@ public class Timer : MonoBehaviour
     }
     private void Update() {
 
-        runTimerCanvas();
+        //runTimerCanvas();
     
     }
 
@@ -28,7 +30,6 @@ public class Timer : MonoBehaviour
     {
         if (Time.time >= nextTime)
         {
-
             nextTime += intervalo;
             seg -= 1;
         }
@@ -44,10 +45,12 @@ public class Timer : MonoBehaviour
             seg = 59;
         }
 
-        if (seg == 0 & seg == 0)
+        if (seg == 0 & min == 0)
         {
-            Debug.Log("Se acabó el juego");
             gameOver.enabled = true;
+            texto.text = min.ToString("00") + ":" + seg.ToString("00");
+            sceneController.stopGame();
+            //sceneController.firstTime = false;
             return false;
         }
 
