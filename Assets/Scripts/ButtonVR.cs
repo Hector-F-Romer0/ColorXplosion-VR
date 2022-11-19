@@ -12,11 +12,18 @@ public class ButtonVR : MonoBehaviour
     AudioSource soundPressed;
     bool isPressed;
 
+    GameObject[] greenDoors;
+    GameObject[] orangeDoors;
+    public string assigedColor;
+
     // Start is called before the first frame update
     void Start()
     {
         soundPressed = GetComponent<AudioSource>();
         isPressed = false;
+
+        greenDoors = GameObject.FindGameObjectsWithTag("doorgreen");
+        orangeDoors = GameObject.FindGameObjectsWithTag("doororange");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,5 +58,49 @@ public class ButtonVR : MonoBehaviour
         Debug.Log("HAS PRESIONADO EL BOTÓN");
     }
 
+    public void toogleDoor()
+    {
 
+        if(assigedColor == "green")
+        {
+            foreach (GameObject gd in greenDoors)
+            {
+                if (gd.activeSelf)
+                {
+
+                    gd.SetActive(false);
+
+                }
+                else
+                {
+
+                    gd.SetActive(true);
+
+                }
+
+            }
+        }
+        else
+        {
+            foreach (GameObject gd in orangeDoors)
+            {
+                if (gd.activeSelf)
+                {
+
+                    gd.SetActive(false);
+
+                }
+                else
+                {
+
+                    gd.SetActive(true);
+
+                }
+
+            }
+        }
+
+        
+  
+    }
 }

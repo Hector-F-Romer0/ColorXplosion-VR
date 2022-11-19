@@ -22,11 +22,17 @@ public class bombController : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
-        //Debug.Log(other.gameObject.name);
+        Debug.Log("Nombre: "+other.gameObject.name);
+        Debug.Log("Nombre: " + other.collider.name);
 
-        if (colorBomb == "yellow" && other.gameObject.name == "collisionYellow")
+        if (other.collider.tag == "Floor")
         {
-            //Debug.Log("Bomba amarilla anotada en contenedor amarillo.");
+            Debug.Log("Game over!");
+        }
+
+        else if (colorBomb == "yellow" && other.gameObject.name == "YellowBomb")
+        {
+            Debug.Log("Bomba amarilla anotada en contenedor amarillo.");
             contador.contador++;
            
             
