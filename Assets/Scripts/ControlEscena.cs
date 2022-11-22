@@ -26,13 +26,13 @@ public class ControlEscena : MonoBehaviour
     {
         if(firstTime == false)
         {
-            InvokeRepeating("spawnBombs", 0f, 2f);
+            InvokeRepeating("spawnBombs", 0f, 10f);
             firstTime = true;
         }
 
         if(startGame == true)
         {
-            Debug.Log("El juego está empiezandoooooo");
+            //Debug.Log("El juego está empiezandoooooo");
             
             index2 = Random.Range(0, spawn.Count);
             positionSpawn = spawn[index2].position;

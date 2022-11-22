@@ -110,7 +110,7 @@ public class ButtonVR : MonoBehaviour
         {
             bombSpawnerController.startGame = true;
             bombSpawnerController.firstTime = false;
-            Debug.Log("Empieza el juego");
+            //Debug.Log("Empieza el juego");
         }
 
     }

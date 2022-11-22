@@ -50,12 +50,19 @@ public class Timer : MonoBehaviour
             gameOver.enabled = true;
             texto.text = min.ToString("00") + ":" + seg.ToString("00");
             sceneController.stopGame();
-            //sceneController.firstTime = false;
+            desappearGameOver();
             return false;
         }
 
         texto.text = min.ToString("00") + ":" + seg.ToString("00");
         return true;
+    }
+
+    public IEnumerator desappearGameOver()
+    {
+        Debug.Log("Hola");
+        yield return new WaitForSeconds(3F);
+        gameOver.enabled = false;
     }
     
 }
